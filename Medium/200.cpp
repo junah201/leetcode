@@ -1,7 +1,6 @@
 // 200. Number of Islands
 // 02/24/2022 02:34	Accepted	39 ms	12.4 MB	cpp
 
-#include <stdio.h>
 #include <vector>
 using namespace std;
 
@@ -15,7 +14,7 @@ int dy[4] = {0, 0, 1, -1};
 class Solution
 {
 public:
-    int dfs(int x, int y, vector<vector<char>> &grid)
+    void dfs(int x, int y, vector<vector<char>> &grid)
     {
         visited[y][x] = 1;
         for (int i = 0; i < 4; i++)
