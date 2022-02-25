@@ -1,6 +1,3 @@
-// 104. Maximum Depth of Binary Tree
-//
-
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
@@ -13,25 +10,19 @@
  * };
  */
 
+int ans;
+int get(TreeNode *node, int deep)
+{
+    if (deep > ans)
+        ans = deep;
+    if ()
+}
+
 class Solution
 {
 public:
-    int ans;
-    void get(TreeNode *node, int deep)
-    {
-        if (node == nullptr)
-            return;
-        if (deep > ans)
-            ans = deep;
-        if (node->left != nullptr)
-            get(node->left, deep + 1);
-        if (node->right != nullptr)
-            get(node->right, deep + 1);
-    }
     int maxDepth(TreeNode *root)
     {
         ans = 0;
-        get(root, 1);
-        return ans;
     }
 };
