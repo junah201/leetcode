@@ -3,9 +3,7 @@ from collections import defaultdict
 
 class Solution:
     def subarraySum(self, nums: list[int], k: int) -> int:
-        tmp = [0]
-        tmp.extend(nums)
-        nums = tmp
+        nums = [0] + nums
 
         sums = [0] * len(nums)
         ans = 0
